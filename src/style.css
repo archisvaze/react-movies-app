@@ -12,6 +12,10 @@ body {
     justify-content: center;
     align-items: center;
     background-color: black;
+
+}
+
+.main-container {
     overflow: hidden;
 }
 
@@ -236,7 +240,7 @@ body {
     width: 300px;
     height: 500px;
     overflow: hidden;
-    animation: slideup 1s ease-in-out;
+    animation: appear 2s ease-in-out;
 }
 
 .mp-poster img {
@@ -248,5 +252,11 @@ body {
 
 
 @keyframes appear {
-    
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }

@@ -52,10 +52,10 @@ function App(props) {
 
         <>
             {loading === false ? (
-                
+
                 <div className="main-container">
                     <div className="header">
-                        <div className="header-title">Popular Movies Today</div>
+                        <div className="header-title">Movie Time</div>
                         <div className="search-container">
                             <input onKeyPress={(e) => {
                                 if (e.key === 'Enter') {
