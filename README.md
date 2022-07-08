@@ -1,3 +1,18 @@
+# Building Movies Website
+
+![](./screenshots/movie_list.png)
+
+## Card Hover State
+
+![](https://i.imgur.com/IzO1jnn.png)
+
+[API Used](https://developers.themoviedb.org/3)
+
+Task is to build a movies website which can get latest movies from TMDB API and when clicked on any movie it can show us the details of that movie.
+
+![](./screenshots/movie_detail.png)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
