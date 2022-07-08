@@ -12,6 +12,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: black;
+    overflow: hidden;
 }
 
 .card-container {
@@ -200,4 +201,52 @@ body {
 
 .search-input::placeholder {
     color: rgba(255, 255, 255, 0.80);
+}
+
+
+.backdrop {
+    z-index: -2;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    object-position: center;
+}
+
+.backdrop-overlay {
+    z-index: -1;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.movie-page-container {
+    border: 3px solid red;
+
+}
+
+.mp-poster {
+    width: 300px;
+    height: 500px;
+    overflow: hidden;
+    animation: slideup 1s ease-in-out;
+}
+
+.mp-poster img {
+    width: 300px;
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+@keyframes appear {
+    
 }
