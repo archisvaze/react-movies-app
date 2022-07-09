@@ -55,7 +55,9 @@ function App(props) {
 
                 <div className="main-container">
                     <div className="header">
-                        <div className="header-title">Movie Time</div>
+                        <div className="header-title">
+                            <span className="l1">M</span> <span className="l2">O</span> <span className="l3">V</span> <span className="l4">I</span> <span className="l5">E</span> <span className="l6">S</span>
+                        </div>
                         <div className="search-container">
                             <input onKeyPress={(e) => {
                                 if (e.key === 'Enter') {

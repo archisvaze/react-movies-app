@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Monofett&family=Monoton&family=Press+Start+2P&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -106,7 +108,7 @@ body {
     justify-content: center;
     align-items: center;
     justify-self: end;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .header {
@@ -126,8 +128,129 @@ body {
 }
 
 .header-title {
-    font-size: 30px;
+    gap: 10px;
+    display: flex;
+    font-size: 40px;
     padding: 20px 0;
+    font-weight: bold;
+
+}
+
+.l1,
+.l2,
+.l3,
+.l4,
+.l5,
+.l6 {
+    font-family: 'Press Start 2P', cursive;
+}
+
+.l1 {
+    animation: letter1 2s linear infinite;
+}
+
+.l2 {
+    animation: letter2 2s linear infinite;
+}
+
+.l3 {
+    animation: letter3 2s linear infinite;
+}
+
+.l4 {
+    animation: letter4 2s linear infinite;
+}
+
+.l5 {
+    animation: letter5 2s linear infinite;
+}
+
+.l6 {
+    animation: letter6 2s linear infinite;
+}
+
+@keyframes letter1 {
+    0% {
+        color: rgb(255, 72, 72);
+    }
+
+    50% {
+        color: rgb(240, 255, 36);
+    }
+
+    100% {
+        color: rgb(255, 72, 72);
+    }
+}
+
+@keyframes letter2 {
+    0% {
+        color: rgb(47, 255, 71);
+    }
+
+    50% {
+        color: rgb(98, 182, 255);
+    }
+
+    100% {
+        color: rgb(47, 255, 71);
+    }
+}
+
+@keyframes letter3 {
+    0% {
+        color: rgb(255, 82, 246);
+    }
+
+    50% {
+        color: rgb(140, 238, 255);
+    }
+
+    100% {
+        color: rgb(255, 82, 246);
+    }
+}
+
+@keyframes letter4 {
+    0% {
+        color: rgb(255, 72, 72);
+    }
+
+    50% {
+        color: rgb(240, 255, 36);
+    }
+
+    100% {
+        color: rgb(255, 72, 72);
+    }
+}
+
+@keyframes letter5 {
+    0% {
+        color: rgb(157, 255, 72);
+    }
+
+    50% {
+        color: rgb(255, 113, 241);
+    }
+
+    100% {
+        color: rgb(157, 255, 72);
+    }
+}
+
+@keyframes letter6 {
+    0% {
+        color: rgb(11, 255, 133);
+    }
+
+    50% {
+        color: rgb(240, 255, 36);
+    }
+
+    100% {
+        color: rgb(11, 255, 133);
+    }
 }
 
 @keyframes slideup {
@@ -208,6 +331,9 @@ body {
 }
 
 
+
+/* movie page */
+
 .backdrop {
     z-index: -2;
     position: fixed;
@@ -226,28 +352,29 @@ body {
     width: 100%;
     top: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
 }
 
 .movie-page-container {
-    border: 3px solid red;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
 }
 
-.mp-poster {
-    width: 300px;
-    height: 500px;
-    overflow: hidden;
-    animation: appear 2s ease-in-out;
-}
+
 
 .mp-poster img {
-    width: 300px;
-    height: 500px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    max-width: 300px;
+    max-height: 500px;
     object-fit: cover;
     object-position: center;
+    animation: appear 2s ease-in-out;
+    box-shadow: 3px 3px 15px 5px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -259,4 +386,53 @@ body {
     100% {
         opacity: 1;
     }
+}
+
+.mp-info {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    flex-wrap: wrap;
+    max-width: 600px;
+}
+
+.mp-title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 40px;
+
+}
+
+.mp-tagline {
+    font-size: 18px;
+    font-style: italic;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.8);
+
+}
+
+.mp-overview {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+@media screen and (min-width: 700px) {
+    .movie-page-container {
+        max-width: 1200px;
+        display: flex;
+        flex-direction: row;
+        padding: 20px;
+    }
+
+    .mp-poster {
+        flex: 1;
+    }
+
+    .mp-info {
+        flex: 1.5;
+    }
+
 }
