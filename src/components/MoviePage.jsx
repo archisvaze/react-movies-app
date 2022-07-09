@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import LoadingScreen from "./LoadingScreen";
 import Genre from './Genre';
+import youtubeIcon from '../youtube-icon2.png'
 
 function MoviePage(props) {
 
@@ -10,13 +11,16 @@ function MoviePage(props) {
 
     let [movieObj, setMoviesObj] = useState([]);
     let [loading, setLoading] = useState(true);
+    let [videoObj, setVideoObj] = useState([]);
 
 
 
 
 
 
-    let posterPath = "http://image.tmdb.org/t/p/w500"
+
+    let posterPath = "http://image.tmdb.org/t/p/w500";
+    let youtubePath = "https://www.youtube.com/e?v="
 
 
     useEffect(() => {
@@ -24,6 +28,9 @@ function MoviePage(props) {
         fetch(`https://api.themoviedb.org/3/movie/${movieID}?api_key=14fafe6d7792756ff3a9c32c527eae57`)
             .then(response => response.json())
             .then(data => setMoviesObj(data))
+        fetch(`https://api.themoviedb.org/3/movie/${movieID}/videos?api_key=14fafe6d7792756ff3a9c32c527eae57`)
+            .then(response => response.json())
+            .then(data => setVideoObj(data))
     })
 
 
@@ -51,6 +58,10 @@ function MoviePage(props) {
                                     return (<Genre genreObj={genreObj} />)
                                 })}
                             </div>
+
+                            <a className='video' target="_blank" rel="noreferrer" href={youtubePath + videoObj.results[0].key}><img className='youtube-icon' src={youtubeIcon} alt="" /> Watch Trailer</a>
+
+
 
                         </div>
                     </div>

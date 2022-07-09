@@ -178,7 +178,7 @@ body {
 /* movie page */
 
 .backdrop {
-    z-index: -2;
+    z-index: -3;
     position: fixed;
     height: 100%;
     width: 100%;
@@ -189,7 +189,7 @@ body {
 }
 
 .backdrop-overlay {
-    z-index: -1;
+    z-index: -2;
     position: fixed;
     height: 100%;
     width: 100%;
@@ -221,15 +221,7 @@ body {
 }
 
 
-@keyframes appear {
-    0% {
-        opacity: 0;
-    }
 
-    100% {
-        opacity: 1;
-    }
-}
 
 .mp-info {
     margin: 20px;
@@ -280,12 +272,39 @@ body {
     border-radius: 4px;
     font-size: 16px;
     font-weight: bold;
+    margin-bottom: 30px;
 }
 
 
+.video {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    padding: 0px 12px 0px 0px;
+    cursor: pointer;
+    transition: 0.4s;
+    box-shadow: 3px 3px 20px 2px rgba(0, 0, 0, 0.2);
+}
 
+.youtube-icon {
+    width: 50px;
+    height: 50px;
+    transition: 0.4s;
+}
 
-
+.video:hover {
+    background: rgb(221, 41, 37);
+    color: white;
+    box-shadow: 3px 3px 20px 5px rgba(0, 0, 0, 0.2);
+}
 
 
 
@@ -320,6 +339,16 @@ body {
 
 .l6 {
     animation: letter6 1s linear infinite;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 @keyframes letter1 {
