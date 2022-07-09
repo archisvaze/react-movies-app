@@ -31,6 +31,7 @@ body {
     animation: slideup 2s ease-in-out;
 }
 
+
 @keyframes slideup {
     0% {
         transform: translateY(100vh);
@@ -58,6 +59,8 @@ body {
 }
 
 .overlay {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     padding: 5px 10px;
     display: flex;
     flex-direction: column;
@@ -209,7 +212,7 @@ body {
 
 
 .mp-poster img {
-    border: 3px solid rgba(255, 255, 255, 0.3);
+    border: 3px solid rgba(255, 255, 255, 0.4);
     border-radius: 10px;
     max-width: 300px;
     max-height: 500px;
@@ -291,6 +294,7 @@ body {
     cursor: pointer;
     transition: 0.4s;
     box-shadow: 3px 3px 20px 2px rgba(0, 0, 0, 0.2);
+    animation: video 2s ease-in-out;
 }
 
 .youtube-icon {
@@ -369,6 +373,16 @@ body {
 
     100% {
         color: rgb(221, 41, 37);
+    }
+}
+
+@keyframes video {
+    0% {
+        color: rgb(221, 41, 37);
+    }
+
+    100% {
+        color: white;
     }
 }
 
