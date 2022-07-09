@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Monofett&family=Monoton&family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap');
 
 * {
     margin: 0;
@@ -142,7 +142,6 @@ body {
     gap: 10px;
     display: flex;
     font-size: 40px;
-    padding: 20px 0;
     font-weight: bold;
 
 }
@@ -314,31 +313,39 @@ body {
 .l4,
 .l5,
 .l6 {
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Rammetto One', cursive;
+    margin-right: 5px;
+    margin-top: 15px;
 }
 
 .l1 {
-    animation: letter1 1s linear infinite;
+    animation: letter 3s ease-out infinite;
+    animation-delay: 0.1s;
 }
 
 .l2 {
-    animation: letter2 1s linear infinite;
+    animation: letter 3s ease-out infinite;
+    animation-delay: 0.2s;
 }
 
 .l3 {
-    animation: letter3 1s linear infinite;
+    animation: letter 3s ease-out infinite;
+    animation-delay: 0.3s;
 }
 
 .l4 {
-    animation: letter4 1s linear infinite;
+    animation: letter 3s ease-out infinite;
+    animation-delay: 0.4s;
 }
 
 .l5 {
-    animation: letter5 1s linear infinite;
+    animation: letter 3s ease-out infinite;
+    animation-delay: 0.5s;
 }
 
 .l6 {
-    animation: letter6 1s linear infinite;
+    animation: letter 3s ease-out infinite;
+    animation-delay: 0.6s;
 }
 
 @keyframes appear {
@@ -351,90 +358,19 @@ body {
     }
 }
 
-@keyframes letter1 {
+@keyframes letter {
     0% {
-        color: rgb(255, 72, 72);
+        color: rgb(221, 41, 37);
     }
 
     50% {
-        color: rgb(240, 255, 36);
+        color: rgb(255, 255, 255);
     }
 
     100% {
-        color: rgb(255, 72, 72);
+        color: rgb(221, 41, 37);
     }
 }
-
-@keyframes letter2 {
-    0% {
-        color: rgb(47, 255, 71);
-    }
-
-    50% {
-        color: rgb(98, 182, 255);
-    }
-
-    100% {
-        color: rgb(47, 255, 71);
-    }
-}
-
-@keyframes letter3 {
-    0% {
-        color: rgb(255, 82, 246);
-    }
-
-    50% {
-        color: rgb(140, 238, 255);
-    }
-
-    100% {
-        color: rgb(255, 82, 246);
-    }
-}
-
-@keyframes letter4 {
-    0% {
-        color: rgb(255, 72, 72);
-    }
-
-    50% {
-        color: rgb(240, 255, 36);
-    }
-
-    100% {
-        color: rgb(255, 72, 72);
-    }
-}
-
-@keyframes letter5 {
-    0% {
-        color: rgb(157, 255, 72);
-    }
-
-    50% {
-        color: rgb(255, 113, 241);
-    }
-
-    100% {
-        color: rgb(157, 255, 72);
-    }
-}
-
-@keyframes letter6 {
-    0% {
-        color: rgb(11, 255, 133);
-    }
-
-    50% {
-        color: rgb(240, 255, 36);
-    }
-
-    100% {
-        color: rgb(11, 255, 133);
-    }
-}
-
 
 /* loading animation */
 
