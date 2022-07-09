@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import LoadingScreen from "./LoadingScreen";
+import Genre from './Genre';
 
 function MoviePage(props) {
 
@@ -45,6 +46,11 @@ function MoviePage(props) {
                             <div className="mp-title">{movieObj.original_title}</div>
                             <div className="mp-tagline">{movieObj.tagline}</div>
                             <div className="mp-overview">{movieObj.overview}</div>
+                            <div className="genre-container">
+                                {movieObj.genres.map(genreObj => {
+                                    return (<Genre genreObj={genreObj} />)
+                                })}
+                            </div>
 
                         </div>
                     </div>
