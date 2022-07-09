@@ -7,7 +7,6 @@ import youtubeIcon from '../youtube-icon2.png'
 function MoviePage(props) {
 
     let { movieID } = useParams();
-    console.log(movieID)
 
     let [movieObj, setMoviesObj] = useState([]);
     let [loading, setLoading] = useState(true);
@@ -15,7 +14,7 @@ function MoviePage(props) {
 
 
 
-
+    console.log(movieID)
 
 
 
@@ -24,14 +23,15 @@ function MoviePage(props) {
 
 
     useEffect(() => {
-        setTimeout(() => setLoading(false), 2000)
+
+        setTimeout(() => setLoading(false), 1500)
         fetch(`https://api.themoviedb.org/3/movie/${movieID}?api_key=14fafe6d7792756ff3a9c32c527eae57`)
             .then(response => response.json())
             .then(data => setMoviesObj(data))
         fetch(`https://api.themoviedb.org/3/movie/${movieID}/videos?api_key=14fafe6d7792756ff3a9c32c527eae57`)
             .then(response => response.json())
             .then(data => setVideoObj(data))
-    })
+    }, [movieID])
 
 
 
@@ -55,7 +55,7 @@ function MoviePage(props) {
                             <div className="mp-overview">{movieObj.overview}</div>
                             <div className="genre-container">
                                 {movieObj.genres.map(genreObj => {
-                                    return (<Genre genreObj={genreObj} />)
+                                    return (<Genre key={genreObj.id} genreObj={genreObj} />)
                                 })}
                             </div>
 
