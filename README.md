@@ -10,7 +10,7 @@ Site Link: https://gorgeous-toffee-7cb784.netlify.app/
 
 ![Screenshot 2022-07-14 221559](https://user-images.githubusercontent.com/92965519/179036525-b3cfc335-44e5-476b-ab6a-1a70b0617f53.png)
 
-Get the latest movie data from TMDB API including credits.
+## Get the latest movie data from TMDB API including credits.
 
 ![Screenshot 2022-07-14 221257](https://user-images.githubusercontent.com/92965519/179036750-9eb47c2e-9636-47b8-8dd6-37310e916fc0.png)
 
