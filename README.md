@@ -1,6 +1,4 @@
 # React Movies Website
-### Look up popular movies
-### Search and get detailed movie information.
 
 Site Link: https://gorgeous-toffee-7cb784.netlify.app/  
 
