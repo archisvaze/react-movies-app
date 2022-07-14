@@ -1,5 +1,5 @@
 # React Movies Website
-## Lookup Trending Movies
+## Search, get details and lookup Trending Movies 
 Site Link : https://gorgeous-toffee-7cb784.netlify.app/  
 
 ![Screenshot 2022-07-14 221445](https://user-images.githubusercontent.com/92965519/179036488-40bed9d8-a695-44bb-8dba-b3f049367da3.png)
