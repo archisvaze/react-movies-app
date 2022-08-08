@@ -63,19 +63,20 @@ function MoviePage(props) {
                             <div className="mp-tagline">{movieObj.tagline}</div>
                             <div className="mp-overview">{movieObj.overview}</div>
                             <div className="cast-container">
-
-                                {castArr.slice(0, 4).map(castObj => {
+                                {castArr.length > 0 ? castArr.slice(0, 4).map(castObj => {
                                     return (<Cast key={castObj.id} castObj={castObj} />)
-                                })}
+                                }) : <></>}
+
                             </div>
                             <div className="genre-container">
-                                {movieObj.genres.map(genreObj => {
+                                {movieObj.genres.length > 0 ? movieObj.genres.map(genreObj => {
                                     return (<Genre key={genreObj.id} genreObj={genreObj} />)
-                                })}
+                                }) : <></>}
+
                             </div>
 
+                            {videoObj.results[0] ? <a className='video' target="_blank" rel="noreferrer" href={youtubePath + videoObj.results[0].key}><img className='youtube-icon' src={youtubeIcon} alt="" /> Watch Trailer</a> : <></>}
 
-                            <a className='video' target="_blank" rel="noreferrer" href={youtubePath + videoObj.results[0].key}><img className='youtube-icon' src={youtubeIcon} alt="" /> Watch Trailer</a>
 
 
 
