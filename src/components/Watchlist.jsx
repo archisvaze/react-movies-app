@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import MovieCard from './MovieCard';
 import { useNavigate } from 'react-router-dom';
 import { removeFromWatchlist } from '../slices/mySlice';
+import { Link } from 'react-router-dom';
 
 
 export default function Watchlist() {
@@ -20,15 +21,19 @@ export default function Watchlist() {
       </div>
       <div className="container">
         {state.watchlist.length === 0 && <h1>No movies to watch yet...</h1>}
-        {state.watchlist.map(movie => <div key={movie.id} className="watclist-card-container">
-          <MovieCard  movie={movie} />
-          <button onClick={(e)=>{
-             e.preventDefault()
-             e.stopPropagation();
-             dispatch(removeFromWatchlist(movie.id))
+        {state.watchlist.map(movie =>
+          <Link key={movie.id} to={`/${movie.id}`} >
+            <div className="watclist-card-container">
+              <MovieCard movie={movie} />
+              <button onClick={(e) => {
+                e.preventDefault()
+                e.stopPropagation();
+                dispatch(removeFromWatchlist(movie.id))
 
-          }} className="remove">X</button>
-        </div>)}
+              }} className="remove">X</button>
+            </div>
+          </Link>
+        )}
       </div>
 
     </div>

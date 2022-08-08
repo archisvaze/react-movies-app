@@ -23,7 +23,7 @@ function App(props) {
                 dispatch(setMovies(data.results));
             })
 
-// eslint-disable-next-line
+        // eslint-disable-next-line
     }, [])
 
     function Search(movieName) {
@@ -48,6 +48,7 @@ function App(props) {
                             <span className="l1">M</span> <span className="l2">O</span> <span className="l3">V</span> <span className="l4">I</span> <span className="l5">E</span> <span className="l6">S</span>
                         </div>
                         <div className="search-container">
+                            <button onClick={() => navigate("/watchlist")} className="watchlist-btn">Watchlist</button>
                             <input onKeyPress={(e) => {
                                 if (e.key === 'Enter') {
                                     Search(e.target.value);
@@ -56,7 +57,6 @@ function App(props) {
                                 }
                             }}
                                 placeholder="Search for a movie" className="search-input" type="text" />
-                            <button onClick={() => navigate("/watchlist")} className="watchlist-btn">Watchlist</button>
                         </div>
 
                     </div>

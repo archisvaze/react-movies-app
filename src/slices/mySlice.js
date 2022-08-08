@@ -33,13 +33,15 @@ const mySlice = createSlice({
                     state.watchlist.splice(i, 1)
                 }
             }
+            localStorage.setItem("watchlist", JSON.stringify(state.watchlist))
         },
-        setMovies:(state, action) =>{
+        setMovies: (state, action) => {
             state.movies = action.payload;
         },
-        setLoading: (state, action) =>{
+        setLoading: (state, action) => {
             state.loading = action.payload
-        }
+        },
+
 
 
     }
@@ -47,5 +49,5 @@ const mySlice = createSlice({
 })
 
 
-export const { addToWatchlist, removeFromWatchlist, setMovies , setLoading } = mySlice.actions;
+export const { addToWatchlist, removeFromWatchlist, setMovies, setLoading } = mySlice.actions;
 export default mySlice.reducer;

@@ -162,6 +162,8 @@ body {
     right: 0;
     left: 0;
     z-index: 2;
+    padding: 10px 0;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 .header-title {
@@ -189,14 +191,14 @@ body {
 }
 
 .search-container {
-    margin-top: 10px;
-    margin-bottom: 20px;
     display: flex;
     flex-direction: row;
     gap: 20px;
     justify-content: center;
     align-items: center;
-    min-width: 300px;
+    width: 100%;
+    max-width: 400px;
+    padding: 0 20px;
 }
 
 .search-input {
@@ -221,8 +223,8 @@ body {
 .backdrop {
     z-index: -3;
     position: fixed;
-    height: 100%;
-    width: 100%;
+    min-height: 100vh;
+    min-width: 100vw;
     top: 0;
     left: 0;
     object-fit: cover;
@@ -232,8 +234,8 @@ body {
 .backdrop-overlay {
     z-index: -2;
     position: fixed;
-    height: 100vh;
-    width: 100vw;
+    min-height: 100vh;
+    min-width: 100vw;
     top: 0;
     left: 0;
     background: rgba(0, 0, 0, 0.5);
@@ -242,13 +244,16 @@ body {
 }
 
 .movie-page-container {
+    min-height: 100vh;
+    min-width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     align-items: center;
     padding: 20px;
-    gap: 20px;
+    gap: 50px;
+    overflow-x: hidden;
 }
 
 
@@ -256,8 +261,8 @@ body {
 .mp-poster img {
     border: 3px solid rgba(255, 255, 255, 0.4);
     border-radius: 10px;
-    max-width: 300px;
-    max-height: 500px;
+    width: 300px;
+    height: 500px;
     object-fit: cover;
     object-position: center;
     animation: appear 2s ease-in-out;
@@ -268,7 +273,6 @@ body {
 
 
 .mp-info {
-    margin: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -519,7 +523,7 @@ body {
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 30px;
+    top: 10px;
     right: 30px;
     border: none;
     background-color: rgba(255, 0, 0, 0.6);
