@@ -526,7 +526,7 @@ body {
     top: 10px;
     right: 30px;
     border: none;
-    background-color: rgba(255, 0, 0, 0.6);
+    background-color: red;
     color: white;
     padding: 5px;
     height: 20px;
@@ -540,6 +540,5 @@ body {
 }
 
 .remove:hover {
-    background-color: red;
     transform: scale(1.5);
 }
