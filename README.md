@@ -1,20 +1,18 @@
-# Building Movies Website  
+# React Movies Website
+## Search, get details and lookup Trending Movies 
+Site Link : https://gorgeous-toffee-7cb784.netlify.app/  
 
-Site Link: https://gorgeous-toffee-7cb784.netlify.app/  
-
-
-![](./screenshots/movie_list.png)
+![Screenshot 2022-07-14 221445](https://user-images.githubusercontent.com/92965519/179036488-40bed9d8-a695-44bb-8dba-b3f049367da3.png)
 
 ## Card Hover State
 
-![](https://i.imgur.com/IzO1jnn.png)
+![Screenshot 2022-07-14 221559](https://user-images.githubusercontent.com/92965519/179036525-b3cfc335-44e5-476b-ab6a-1a70b0617f53.png)
+
+## Get the latest movie data from TMDB API including credits.
+
+![Screenshot 2022-07-14 221257](https://user-images.githubusercontent.com/92965519/179036750-9eb47c2e-9636-47b8-8dd6-37310e916fc0.png)
 
 [API Used](https://developers.themoviedb.org/3)
-
-Task is to build a movies website which can get latest movies from TMDB API and when clicked on any movie it can show us the details of that movie.
-
-![](./screenshots/movie_detail.png)
-
 
 # Getting Started with Create React App
 
