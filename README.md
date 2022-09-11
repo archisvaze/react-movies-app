@@ -14,6 +14,8 @@ Site Link : https://gorgeous-toffee-7cb784.netlify.app/
 
 [API Used](https://developers.themoviedb.org/3)
 
+![Screenshot 2022-08-09 091745](https://user-images.githubusercontent.com/92965519/189513069-34d0fc20-2e6f-4d5d-a827-51d77bf4bd93.png)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
